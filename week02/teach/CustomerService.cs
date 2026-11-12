@@ -14,6 +14,9 @@ public class CustomerService {
         // Scenario: 
         // Expected Result: 
         Console.WriteLine("Test 1");
+        var service = new CustomerService(5);
+        service.AddNewCustomer();
+        service.ServeCustomer();
 
         // Defect(s) Found: 
 
@@ -89,7 +92,7 @@ public class CustomerService {
     /// </summary>
     private void ServeCustomer() {
         _queue.RemoveAt(0);
-        var customer = _queue[0];
+         var customer = _queue[0];
         Console.WriteLine(customer);
     }
 
